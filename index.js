@@ -4,7 +4,6 @@ const path = require('node:path');
 const { Client, Events, GatewayIntentBits } = require('discord.js');
 const { loadEnvFile } = require('node:process');
 loadEnvFile('./.env');
-console.log(process.env.TOKEN)
 const TOKEN = process.env.TOKEN
 const { cooldowns } = interaction.client;
 
