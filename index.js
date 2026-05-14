@@ -4,8 +4,7 @@ const path = require('node:path');
 const { Client, Events, GatewayIntentBits } = require('discord.js');
 const { loadEnvFile } = require('node:process');
 loadEnvFile('./.env');
-const TOKEN = process.env.TOKEN
-const { cooldowns } = interaction.client;
+const TOKEN = process.env.TOKEN;
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
@@ -62,6 +61,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 		}
 	}
 	client.cooldowns = new Collection();
+	const { cooldowns } = interaction.client;
 	if (!cooldowns.has(command.data.name)) {
 		cooldowns.set(command.data.name, new Collection());
 	}
