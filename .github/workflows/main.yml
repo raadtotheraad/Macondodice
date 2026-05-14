@@ -15,4 +15,4 @@ jobs:
         env:
           TOKEN: ${{ secrets.TOKEN }}
           FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-        run: node index.js
+        run: npm install discord.js, node deploy-commands.js, node index.js
