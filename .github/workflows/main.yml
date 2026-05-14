@@ -1,0 +1,5 @@
+steps:
+  - name: Run bot
+    env:
+      TOKEN: ${{ secrets.TOKEN }}
+    run: node index.js
