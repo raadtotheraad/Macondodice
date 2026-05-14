@@ -17,7 +17,7 @@ module.exports = {
 		const ContainerSpinning = new ContainerBuilder()
 			.addTextDisplayComponents((textDisplay) =>
 				textDisplay.setContent('The dice is rolling!!')
-			),
+			);
 		const ContainerResult = new ContainerBuilder()
 			.addTextDisplayComponents((textDisplay) =>
 				textDisplay.setContent('The dice has stopped rolling!')
