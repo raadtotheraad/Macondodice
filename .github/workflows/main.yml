@@ -14,5 +14,4 @@ jobs:
       - name: Run bot
         env:
           TOKEN: ${{ secrets.TOKEN }}
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
         run: npm install discord.js && node deploy-commands.js && node index.js
